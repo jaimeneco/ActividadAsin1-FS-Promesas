@@ -1,18 +1,21 @@
-import React from 'react';
-import Componente1 from './components/componente1';
-import Componente2 from './components/componente2';
-import Componente3 from './components/componente3';
+import React, { useEffect, useState } from "react";
+import {FakeStore} from './components/FakeStore';
+import {RandomUser} from './components/RandomUser';
+import {Pokemon} from './components/Pokemon';
 import './index.css';
 
-const App = () => {
+
+const Componentes = () => {
   return (
-    <div className="app">
-      <h1>Asíncrono 1 - Full Stack - Promesas</h1>
-      <Componente1 />
-      <Componente2 />
-      <Componente3 />
+    <div className="container">
+      <h1 className="title">ASÍNCRONO 1 - Full Stack - Promesas</h1>
+      <div className="grid">
+        <FakeStore />
+        <RandomUser />
+        <Pokemon />
+      </div>
     </div>
   );
 };
 
-export default App;
+export default Componentes;
